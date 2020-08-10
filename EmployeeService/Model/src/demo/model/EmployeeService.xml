@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmployeeService"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="EmployeeEOView1"
+    ViewObjectName="demo.model.EmployeeEOView"/>
+  <ViewUsage
+    Name="EmployeeVO1"
+    ViewObjectName="demo.model.EmployeeVO"/>
+  <ViewUsage
+    Name="EmployeeEOView2"
+    ViewObjectName="demo.model.EmployeeEOView"/>
+  <ViewUsage
+    Name="EmployeeEOView3"
+    ViewObjectName="demo.model.EmployeeEOView"/>
+  <ViewUsage
+    Name="EmployeeROVO1"
+    ViewObjectName="demo.model.EmployeeROVO"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="demo.model.EmpManagerFkLink"
+    SrcViewUsageName="demo.model.EmployeeService.EmployeeEOView2"
+    DstViewUsageName="demo.model.EmployeeService.EmployeeEOView3"
+    Reversed="false"/>
+</AppModule>
