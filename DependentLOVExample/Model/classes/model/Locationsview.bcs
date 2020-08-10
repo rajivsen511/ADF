@@ -1,0 +1,12 @@
+//Groovy Scripts for model.Locationsview
+
+package model
+
+import oracle.jbo.script.annotation.AccessorParameterExpression;
+
+@AccessorParameterExpression(accessorName="StatesLOV1", name="p_country")
+def p_country_StatesLOV1_BindVariable_BoundParameter()
+{
+CountryId
+}
+

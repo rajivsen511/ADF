@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LocCIdFkAssoc"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="CountyriesEO"
+    Cardinality="1"
+    Source="true"
+    Owner="model.CountyriesEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="CountyriesEO"/>
+      <Attr Name="_foreignKey" Value="model.CountyriesEO.CountryCIdPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.CountyriesEO.CountryId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="LocationsEO"
+    Cardinality="-1"
+    Owner="model.LocationsEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="LocationsEO"/>
+      <Attr Name="_foreignKey" Value="model.LocationsEO.LocCIdFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.LocationsEO.CountryId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
