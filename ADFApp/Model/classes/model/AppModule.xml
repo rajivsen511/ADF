@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ComponentClass="model.AppModuleImpl"
+  DefClass="model.AppModuleDefImpl"
+  ClearCacheOnRollback="true"
+  ComponentInterface="model.common.AppModule">
+  <DesignTime>
+    <Attr Name="_isDefCodegen" Value="true"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="EmployeeRVO1"
+    ViewObjectName="model.EmployeeRVO"/>
+  <ViewUsage
+    Name="EmployeeVO1"
+    ViewObjectName="model.EmployeeVO"/>
+  <ViewUsage
+    Name="DepartmentsRVO1"
+    ViewObjectName="model.DepartmentsRVO"/>
+  <ViewUsage
+    Name="DepartmentsVO1"
+    ViewObjectName="model.DepartmentsVO"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="createEmployeeRow"
+      MethodName="createEmployeeRow">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="saveEmployeeRow"
+      MethodName="saveEmployeeRow">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="createEmployeeRow1"
+      MethodName="createEmployeeRow1">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="saveEmployeeRow1"
+      MethodName="saveEmployeeRow1">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="SearchEmployee"
+      MethodName="SearchEmployee">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="employeeID"
+        Type="java.lang.Integer"/>
+    </Method>
+  </ClientInterface>
+</AppModule>
