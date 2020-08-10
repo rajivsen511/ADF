@@ -1,0 +1,12 @@
+//Groovy Scripts for demo.model.Employees
+
+package demo.model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="EmployeeId")
+def EmployeeId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("EMPLOYEES_SEQ",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

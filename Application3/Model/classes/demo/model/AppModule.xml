@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ComponentClass="demo.model.AppModuleImpl"
+  ClearCacheOnRollback="true"
+  ComponentInterface="demo.model.common.AppModule">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="demo.model.AppModule_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="demo.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="demo.model.EmployeesView"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink"
+    ViewLinkObjectName="demo.model.EmpManagerFkLink"
+    SrcViewUsageName="demo.model.AppModule.EmployeesView1"
+    DstViewUsageName="demo.model.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="createEmployeeRow"
+      MethodName="createEmployeeRow">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="demo.model.ModelBundle"/>
+  </ResourceBundle>
+</AppModule>
