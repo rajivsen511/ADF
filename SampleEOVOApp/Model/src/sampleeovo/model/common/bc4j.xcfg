@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="sampleeovo.model.SampleAppModule">
+    <AppModuleConfig name="SampleAppModuleLocal" jbo.project="sampleeovo.model.Model"
+                     ApplicationName="sampleeovo.model.SampleAppModule" DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/Connection1DS"/>
+      <Security AppModuleJndiName="sampleeovo.model.SampleAppModule"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="SampleAppModuleShared" jbo.project="sampleeovo.model.Model"
+                     ApplicationName="sampleeovo.model.SampleAppModule" DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/Connection1DS"/>
+      <Security AppModuleJndiName="sampleeovo.model.SampleAppModule"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>
